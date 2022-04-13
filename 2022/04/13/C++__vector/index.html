@@ -152,7 +152,7 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >post</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >C++ vector使用方法</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -162,17 +162,22 @@
 </code></pre>
 <h3 id="2-动态数组"><a href="#2-动态数组" class="headerlink" title="2.动态数组"></a>2.动态数组</h3><pre><code>支持对序列中的任意元素进行快速直接访问，甚至可以通过指针算述进行该操作。操供了在序列末尾相对快速地添加/删除元素的操作。
 </code></pre>
-<h2 id="三、基本函数实现"><a href="#三、基本函数实现" class="headerlink" title="三、基本函数实现"></a>三、基本函数实现</h2><pre><code>+ `void push_back(const T&amp; x)​`:向量尾部增加一个元素X
-​+ `void pop_back()​`:删除向量中最后一个元素
-</code></pre>
-<p>​    + <code>void clear()</code>​:清空向量中所有元素<br>    + <code>bool empty() const​</code>:判断向量是否为空，若为空，则向量中无元素<br>    + <code>int size() const</code>​:返回向量中元素的个数<br>​    + <code>int capacity() const​</code>:返回当前向量所能容纳的最大元素值<br>​    + <code>int max_size() const​</code>:返回最大可允许的 vector 元素数量值<br>    + <code>void swap(vector&amp;)</code>​:交换两个同类型向量的数据<br>​    + <code>void assign(int n,const T&amp; x)</code>​:设置向量中前n个元素的值为x<br>​    + <code>void assign(const_iterator first,const_iterator last)​</code>:向量中[first,last)中元素设置成当前向量元素</p>
-<h2 id="四、基本用法"><a href="#四、基本用法" class="headerlink" title="四、基本用法"></a>四、基本用法</h2><pre><code>&gt; `#include &lt; vector&gt;`
-&gt; `using namespace std;`
-
-+ Vector&lt;类型&gt;标识符
-+ Vector&lt;类型&gt;标识符(最大容量)
-+ Vector&lt;类型&gt;标识符(最大容量,初始所有值)
-</code></pre>
+<h2 id="三、基本函数实现"><a href="#三、基本函数实现" class="headerlink" title="三、基本函数实现"></a>三、基本函数实现</h2><ul>
+<li>void push_back(const T&amp; x)​:向量尾部增加一个元素X</li>
+<li>void pop_back()​:删除向量中最后一个元素</li>
+<li>​void clear()​:清空向量中所有元素</li>
+<li>bool empty() const​:判断向量是否为空，若为空，则向量中无元素</li>
+<li>int size() const​:返回向量中元素的个数<br>​+ int capacity() const​:返回当前向量所能容纳的最大元素值<br>​+ int max_size() const​:返回最大可允许的 vector 元素数量值</li>
+<li>void swap(vector&amp;)​:交换两个同类型向量的数据</li>
+<li>​ void assign(int n,const T&amp; x)​:设置向量中前n个元素的值为x</li>
+<li>​ void assign(const_iterator first,const_iterator last)​:向量中[first,last)中元素设置成当前向量元素</li>
+</ul>
+<h2 id="四、基本用法"><a href="#四、基本用法" class="headerlink" title="四、基本用法"></a>四、基本用法</h2><p> <code>#include &lt; vector&gt;</code><br> <code>using namespace std;</code></p>
+<ul>
+<li>Vector&lt;类型&gt;标识符</li>
+<li>Vector&lt;类型&gt;标识符(最大容量)</li>
+<li>Vector&lt;类型&gt;标识符(最大容量,初始所有值)</li>
+</ul>
 <h2 id="五、基本操作"><a href="#五、基本操作" class="headerlink" title="五、基本操作"></a>五、基本操作</h2><pre><code>(1)头文件​#include&lt;vector&gt;​.
 
 (2)创建vector对象，​vector&lt;int&gt; vec​;
@@ -182,15 +187,14 @@
 (4)使用下标访问元素，​cout&lt;&lt;vec[0]&lt;&lt;endl​;记住下标是从0开始的。
 
 (5)使用迭代器访问元素.
-
+</code></pre>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator it;</span><br><span class="line"><span class="keyword">for</span>(it=vec.<span class="built_in">begin</span>();it!=vec.<span class="built_in">end</span>();it++)</span><br><span class="line">    cout&lt;&lt;*it&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
 
-(6)插入元素：​vec.insert(vec.begin()+i,a)​; 在第i+1个元素前面插入a;
+<pre><code>(6)插入元素：​vec.insert(vec.begin()+i,a)​; 在第i+1个元素前面插入a;
 
-(7)删除元素：​vec.erase(vec.begin()+2)​ ; 删除第3个元素
-</code></pre>
-<p>​       vec.erase(vec.begin()+i,vec.end()+j)​; 删除区间[ i,j-1] 区间从0开始</p>
-<pre><code>(8)向量大小: ​vec.size()​;
+(7)删除元素：​vec.erase(vec.begin()+2)​ ; 删除第3个元素; vec.erase(vec.begin()+i,vec.end()+j)​; 删除区间[ i,j-1] 区间从0开始;
+
+(8)向量大小: ​vec.size()​;
 
 (9)清空: ​vec.clear()​;
 

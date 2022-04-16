@@ -152,54 +152,29 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >C++ vector使用方法</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Leecode_001</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="C-vector使用方法"><a href="#C-vector使用方法" class="headerlink" title="C++ vector使用方法"></a>C++ vector使用方法</h1><h2 id="一、什么是vector"><a href="#一、什么是vector" class="headerlink" title="一、什么是vector"></a>一、什么是vector</h2><pre><code>向量（Vector）是一个能够存放任意类型的动态数组。
-</code></pre>
-<h2 id="二、特性"><a href="#二、特性" class="headerlink" title="二、特性"></a>二、特性</h2><h3 id="1-顺序序列"><a href="#1-顺序序列" class="headerlink" title="1.顺序序列"></a>1.顺序序列</h3><pre><code>顺序容器中的元素按照严格的线性顺序排序。可以通过元素在序列中的位置访问对应的元素。
-</code></pre>
-<h3 id="2-动态数组"><a href="#2-动态数组" class="headerlink" title="2.动态数组"></a>2.动态数组</h3><pre><code>支持对序列中的任意元素进行快速直接访问，甚至可以通过指针算述进行该操作。操供了在序列末尾相对快速地添加/删除元素的操作。
-</code></pre>
-<h2 id="三、基本函数实现"><a href="#三、基本函数实现" class="headerlink" title="三、基本函数实现"></a>三、基本函数实现</h2><ul>
-<li>void push_back(const T&amp; x)​:向量尾部增加一个元素X</li>
-<li>void pop_back()​:删除向量中最后一个元素</li>
-<li>​void clear()​:清空向量中所有元素</li>
-<li>bool empty() const​:判断向量是否为空，若为空，则向量中无元素</li>
-<li>int size() const​:返回向量中元素的个数<br>​+ int capacity() const​:返回当前向量所能容纳的最大元素值<br>​+ int max_size() const​:返回最大可允许的 vector 元素数量值</li>
-<li>void swap(vector&amp;)​:交换两个同类型向量的数据</li>
-<li>​ void assign(int n,const T&amp; x)​:设置向量中前n个元素的值为x</li>
-<li>​ void assign(const_iterator first,const_iterator last)​:向量中[first,last)中元素设置成当前向量元素</li>
-</ul>
-<h2 id="四、基本用法"><a href="#四、基本用法" class="headerlink" title="四、基本用法"></a>四、基本用法</h2><p> <code>#include &lt; vector&gt;</code><br> <code>using namespace std;</code></p>
-<ul>
-<li>Vector&lt;类型&gt;标识符</li>
-<li>Vector&lt;类型&gt;标识符(最大容量)</li>
-<li>Vector&lt;类型&gt;标识符(最大容量,初始所有值)</li>
-</ul>
-<h2 id="五、基本操作"><a href="#五、基本操作" class="headerlink" title="五、基本操作"></a>五、基本操作</h2><pre><code>(1)头文件​#include&lt;vector&gt;​.
-
-(2)创建vector对象，​vector&lt;int&gt; vec​;
-
-(3)尾部插入数字：​vec.push_back(a)​;
-
-(4)使用下标访问元素，​cout&lt;&lt;vec[0]&lt;&lt;endl​;记住下标是从0开始的。
-
-(5)使用迭代器访问元素.
-</code></pre>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt;::iterator it;</span><br><span class="line"><span class="keyword">for</span>(it=vec.<span class="built_in">begin</span>();it!=vec.<span class="built_in">end</span>();it++)</span><br><span class="line">    cout&lt;&lt;*it&lt;&lt;endl;</span><br></pre></td></tr></table></figure>
-
-<pre><code>(6)插入元素：​vec.insert(vec.begin()+i,a)​; 在第i+1个元素前面插入a;
-
-(7)删除元素：​vec.erase(vec.begin()+2)​ ; 删除第3个元素; vec.erase(vec.begin()+i,vec.end()+j)​; 删除区间[ i,j-1] 区间从0开始;
-
-(8)向量大小: ​vec.size()​;
-
-(9)清空: ​vec.clear()​;
-
-特别提示：这里有 begin() 与 end() 函数、front() 与 back() 的差别
-</code></pre>
+                <h1 id="力扣题解001"><a href="#力扣题解001" class="headerlink" title="力扣题解001"></a>力扣题解001</h1><h2 id="我的题解"><a href="#我的题解" class="headerlink" title="我的题解"></a>我的题解</h2><p>暴力解法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">solu</span><span class="params">(<span class="number">2</span>)</span></span>;</span><br><span class="line">        <span class="type">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;nums.<span class="built_in">size</span>();i++)</span><br><span class="line">        &#123;    <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;nums.<span class="built_in">size</span>();j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">unsigned</span> plus=nums[i]+nums[j];</span><br><span class="line">                <span class="keyword">if</span>(plus==target)</span><br><span class="line">                &#123;</span><br><span class="line">                    solu.<span class="built_in">clear</span>();</span><br><span class="line">                    solu.<span class="built_in">push_back</span>(j);</span><br><span class="line">                    solu.<span class="built_in">push_back</span>(i);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> solu;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="我的效率"><a href="#我的效率" class="headerlink" title="我的效率"></a>我的效率</h2><blockquote>
+<p>时间复杂度O(n^2);</p>
+<blockquote>
+<p>执行用时：516 ms, 在所有 C++ 提交中击败了5.25% 的用户;</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>空间复杂度O(1);</p>
+<blockquote>
+<p>内存消耗：9.7 MB, 在所有 C++ 提交中击败了99.42% 的用户;</p>
+</blockquote>
+</blockquote>
+<h2 id="其他题解"><a href="#其他题解" class="headerlink" title="其他题解"></a>其他题解</h2><h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>我们创建一个哈希表，对于每一个 x，我们首先查询哈希表中是否存在 target - x，然后将 x 插入到哈希表中，即可保证不会让 x 和自己匹配。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">twoSum</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums, <span class="type">int</span> target)</span> </span>&#123;</span><br><span class="line">        unordered_map&lt;<span class="type">int</span>, <span class="type">int</span>&gt; hashtable;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); ++i) &#123;</span><br><span class="line">            <span class="keyword">auto</span> it = hashtable.<span class="built_in">find</span>(target - nums[i]);</span><br><span class="line">            <span class="keyword">if</span> (it != hashtable.<span class="built_in">end</span>()) &#123;</span><br><span class="line">                <span class="keyword">return</span> &#123;it-&gt;second, i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            hashtable[nums[i]] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="效率"><a href="#效率" class="headerlink" title="效率"></a>效率</h3><blockquote>
+<p>时间复杂度O(n);<br>空间复杂度O(1);</p>
+</blockquote>
 
             </div>
 
@@ -262,8 +237,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://example.com/2022/04/13/C++__vector/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://example.com/2022/04/13/C++__vector/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://example.com/2022/04/13/LeeCode-001/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://example.com/2022/04/13/LeeCode-001/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
